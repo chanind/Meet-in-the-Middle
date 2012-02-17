@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Meet in the Middle</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+	</head>
+	<body>
+		<div class="main">
+			<div class="title">
+				Meet <span class="small">in the</span> Middle
+			</div>
+			<div class="subtitle">
+				Enter 2 addresses and we'll show you can meet in the middle
+			</div>
+			<div class="searchbox">
+				<form id="js_searchform" action="/" method="post">
+					<div class="half">
+						<div class="label">Place 1</div>
+						<input type="text" id="js_place1" title="Address, street, or city"/>
+					</div>
+					<div class="half">
+						<div class="label">Place 2</div>
+						<input type="text" id="js_place2" title="Address, street, or city" />
+					</div>
+					<input type="submit" class="search_button" value="Go" />
+					<div class="cleared"></div>
+				</form>
+			</div>
+			<div id="js_errors" class="errors" style="display:none">Could not find that location</div>
+			<div class="results" id="js_results" style="visibility:hidden">
+				<div class="map" id="js_map"></div>
+				<div class="list" id="js_list">
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.4/mootools-yui-compressed.js"></script>
+		<script type="text/javascript" src="mootools-more.js"></script>
+		<script type="text/javascript" src="application.js"></script>
+	</body>
+</html>
